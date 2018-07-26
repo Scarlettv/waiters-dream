@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<header>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</header>
+  <head>
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="/assets/tables.css" type="text/css"/> -->
+    <!--<link rel="stylesheet" href="/assets/todo-list.ejs">-->
+    <title>Tables</title>
+  </head>
+  <body>
+    <div id="wd-table">
+      <form>
+        <div>
+          <ul>
+            <% for(var i=0; i < tables.length; i++) { %>
+             <li> <a href="/menu/<%= tables[i].id %>"> <%= tables[i].name %> </a> - Waited by <%= tables[i].user %></li>
+            <% } %>
+          </ul>
+        </div>
+        <input type="text" id="i1" placeholder="Add New Table...">
+        <input type="text" id="i2" placeholder="Waiter Name">
+        <button type="submit" id="t1">Add table</button>
+      </form>
+    </div>
+  </body>
+  <script src="assets/tables-list.js" type="text/javascript"></script>
+</html>
+TABLES.EJS

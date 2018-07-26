@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<header>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</header>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/styles.css" type="text/css"/>
+    <!--<link rel="stylesheet" href="/assets/todo-list.ejs">-->
+    <title>Menu</title>
+  </head>
+  <body>
+    <h1>The Menu</h1>
+    <div id="wd-table">
+      <form>
+        <input type="text" id="inputbar1" placeholder="Add New Item..." required>
+        <input type="text" id="inputbar2" placeholder="Price" required>
+              <input type="text" id="inputbar3" placeholder="Modify">
+        <button type="submit" id="subbtn1">Add Item</button>
+      </form>
+      <div>
+          <ul>
+            <% for(var i=0; i < wd.length; i++) { %>
+            <li class="sizes"> <%= wd[i].item %> - <%= wd[i].price %>$<button type="submit" id="<%= wd[i].id %>" class="deletebtn">x</button>
+                <ul>
+                    <di class="sizes"> <%= wd[i].notes %></di>
+                </ul>
+            </li>
+                  <% } %>
+          </ul>
+      </div>
+      <button type="submit" id="subbtn1" class="animated_div" onclick="window.location.href = '/cook' " />Submit</button>
+      <!-- <a href="/">Wait Later</a> -->
+    </div>
+  </body>
+  <script src="assets/wd-list.js" type="text/javascript"></script>
+</html>

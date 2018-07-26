@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<header>
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</header>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/assets/styles.css" type="text/css"/>
+    <!--<link rel="stylesheet" href="/assets/todo-list.ejs">-->
+    <title>Cook</title>
+  </head>
+  <body>
+    <h1>What to cook</h1>
+    <div id="wd-table">
+      <div>
+          <ul>
+            <% for(var i=0; i < wd.length; i++) { %>
+                <ul>
+                  <li class="sizes"> <%= wd[i].item %>:
+                    <di class="sizes"> <%= wd[i].notes %></di>
+                </ul>
+            </li>
+                  <% } %>
+          </ul>
+      </div>
+      <button type="submit" id="subbtn1" class="animated_div">Finished</button>
+    </div>
+  </body>
+  <script src="assets/wd-list.js" type="text/javascript"></script>
+</html>
